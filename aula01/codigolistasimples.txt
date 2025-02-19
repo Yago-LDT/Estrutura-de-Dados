@@ -1,0 +1,25 @@
+class Node{
+int data;
+Node next;
+}
+
+public class ListaSimples{
+Node primeiro = new Node();
+Node segundo = new Node();
+Node terceiro = new Node();
+
+primeiro.data = 10;
+primeiro.next = segundo;
+
+segundo.data = 20;
+segundo.next = terceiro;
+
+terceiro.data = 30;
+terceiro.next = null;
+
+Node atual = primeiro;
+whie(atual != null){
+  System.out.println(atual.data);
+  atual = atual.next;
+  }
+}
