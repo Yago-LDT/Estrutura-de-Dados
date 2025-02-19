@@ -1,0 +1,40 @@
+public static class ListaLigada{
+
+      
+        public void AdicionarLista(){
+    
+        }
+    
+        public void RemoverLista(){
+    
+        }
+    
+        public void LerLista(){
+    
+        }
+       
+}
+    
+    public static class ArraySimples{
+        int[] valores = {};
+        
+        public void AdicionarArray(int a){
+        
+        }
+        
+        public void RemoverArray(int m){
+        int[] valores = {-m};
+        }
+        
+        public void LerArray(){
+            for(int i = 0; i < valores.length; i++){
+                System.out.println(valores[i]);
+            }
+        }
+        
+    }
+
+No main:
+ArraySimples simples = new ArraySimples();
+        simples.AdicionarArray(5);
+        simples.LerArray();
