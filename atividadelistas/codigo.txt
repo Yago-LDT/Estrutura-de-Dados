@@ -1,0 +1,120 @@
+Lista Ligada:
+
+public class Node{
+        int valor;
+        Node next;
+        
+        public Node(int valor){
+            this.valor = valor;
+            this.next = null;
+        }
+    }
+    
+    private Node cabeca;
+    
+    public ListaLigada(){
+        cabeca = null;
+    }
+        
+    public void AdicionarLista(int i){
+        Node novonode = new Node(i);
+        
+        if(cabeca == null){
+            cabeca = novonode;
+        }else{
+            Node atual = cabeca;
+            
+            while(atual.next != null){
+                atual = atual.next;
+            }
+            atual.next = novonode;
+        }
+    }
+    
+    
+    public boolean RemoverLista(int i){
+        if(cabeca == null){
+            return false;
+        }
+        
+        if(cabeca.valor == i){
+        cabeca = cabeca.next;
+        return true;
+        }
+        
+        Node atual = cabeca;
+        while (atual.next != null && atual.next.valor != i){
+        atual = atual.next;
+        }
+        
+        if(atual.next != null){
+            atual.next = atual.next.next;
+            return true;
+        }
+        
+        return false;
+    }
+    
+    public void LerLista(){
+         Node atual = cabeca;
+        while (atual != null) {
+            System.out.print(atual.valor + " ");
+            atual = atual.next;
+        }
+        System.out.println();
+    }
+
+ListaSimples:
+
+int[] valores = {}; 
+
+    public int tamanhoatual= 0; 
+    
+    public void AdicionarArray(int a){ 
+        
+        if(tamanhoatual == valores.length){
+        int[] novosvalores = new int[valores.length +1]; 
+        System.arraycopy(valores, 0, novosvalores, 0, valores.length);
+        valores = novosvalores; 
+        }
+        
+        valores[tamanhoatual] = a;
+        tamanhoatual++;
+    }
+        
+    public boolean RemoverArray(int e){
+        for(int i = 0; i < tamanhoatual; i++){
+            if(valores[i] == e){
+                for(int j = i; j < tamanhoatual - 1; j++){
+                    valores[j] = valores[j+1];
+                }
+                valores[tamanhoatual - 1] = 0;
+                tamanhoatual--;
+                return true;
+            }
+        }
+        return false;
+    }
+        
+    public void LerArray(){
+        for(int i = 0; i < valores.length; i++){
+            System.out.println(valores[i]);
+        }
+    }
+
+Main:
+
+ListaSimples listarray = new ListaSimples();
+       listarray.AdicionarArray(1);
+       listarray.AdicionarArray(6);
+       listarray.AdicionarArray(15);
+       listarray.RemoverArray(15);
+       listarray.LerArray();
+       
+       ListaLigada listadinamica = new ListaLigada();
+       listadinamica.AdicionarLista(10);
+       listadinamica.AdicionarLista(89);
+       listadinamica.AdicionarLista(5);
+       listadinamica.AdicionarLista(24);
+       listadinamica.RemoverLista(5);
+       listadinamica.LerLista();
