@@ -1,0 +1,2 @@
+deixar aqui o código da questão 01 mas com alterações para implementar a classe gerenciador de estruturas,
+que usa polimorfismo para alternar entre os tipos de listas.
