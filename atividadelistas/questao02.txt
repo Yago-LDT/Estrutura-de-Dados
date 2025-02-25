@@ -1,0 +1,13 @@
+"Explique, com código, como a orientação a objetos pode melhorar a manipulação de estruturas de dados."
+
+A Orientação à Objetos pode melhorar a manipulação de Estruturas de Dados da mesma forma que a POO melhora qualquer tipo de código:
+facilita reutilização, permite melhor organização do código, facilita manutenção do código e traz mais segurança.
+
+A resposta da questão 01 é um claro exemplo disso. A Lista Simples (array) e a Lista Dinâmica (ListaLigada), estão em classes diferentes
+e através da POO acessamos os atributos e métodos das duas classes no método main para a execução do programa.
+
+Com isso a utilização desses métodos e atributos ficou muito mais fácil e organizada. No método main temos apenas a chamada dos métodos,
+sem a lógica sendo implementada neles dentro do main, porque esses métodos estão sendo acessados pelos objetos instanciados das classes.
+
+O código e a sequência do programa ficou muito mais compreensível, organizada e flexível no main, e também em cada classe,
+pois houve essa compartimentalização. 
