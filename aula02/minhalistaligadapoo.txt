@@ -1,0 +1,34 @@
+Classe ListaLigada.java
+
+package com.aula01;
+
+import java.util.LinkedList;
+
+public class ListaLigada {
+    LinkedList <String> lista = new LinkedList();
+    
+    public void adicionar(String a){
+        lista.add(a);
+    }
+    
+    public void remover(String r){
+        lista.remove(r);
+    }
+    
+    public void ler(){
+        
+        for(String elemento : lista){
+            System.out.println(elemento);
+        }
+        
+    }
+    
+}
+
+Main:
+
+ListaLigada l1 = new ListaLigada();
+        l1.adicionar("Estrutura");
+        l1.adicionar("De");
+        l1.adicionar("Dados");
+        l1.ler();
