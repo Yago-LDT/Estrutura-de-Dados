@@ -1,0 +1,57 @@
+Interface Lista:
+
+package com.aula02.exercicio01;
+
+public interface Lista {
+    void adicionar (int valor);
+    void remover (int valor);
+    void ler();
+}
+
+ListaLigada.java:
+
+package com.aula02.exercicio01;
+
+import java.util.LinkedList;
+
+public class ListaLigada implements Lista {
+    
+    LinkedList lista = new LinkedList();
+    
+    @Override
+    public void adicionar(int valor) {
+       lista.add(valor);
+    }
+
+    @Override
+    public void remover(int valor) {
+    lista.remove(Integer.valueOf(valor));
+    }
+
+    @Override
+    public void ler() {
+        System.out.println(lista);
+    }
+    
+}
+
+
+Exemplo02 (main):
+
+public static void main (String[] args){
+    
+    ListaLigada lista = new ListaLigada();
+    
+    lista.adicionar(1);
+    lista.adicionar(10);
+    lista.adicionar(20);
+    lista.adicionar(89);
+    lista.ler();
+        System.out.println("Removendo dois números da lista");
+        System.out.println("");
+    lista.remover(20);
+    lista.remover(1);
+    lista.ler();
+    
+    }
+
